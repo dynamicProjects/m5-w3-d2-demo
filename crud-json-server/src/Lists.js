@@ -15,8 +15,8 @@ function Lists(props){
                     <UpdateList
                     elementId = {element.id}
                     singledata = {props.singledata}
-                    getLists = {props.getList}
-                    UpdateList = {props.UpdateList}
+                    getList = {props.getList}
+                    updateList = {props.updateList}
                     handleChange = {props.handleChange}
                     ></UpdateList>
                 </td>

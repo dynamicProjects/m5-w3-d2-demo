@@ -10,7 +10,7 @@ function DeleteList(props){
              <Button variant= "primary" 
             onClick={(evt)=>{
                 handleShow();
-                props.getList(evt,props.elementId);
+                props.getLists(evt,props.elementId);
             }}>
                 Delete
             </Button>

@@ -120,7 +120,7 @@ class App extends React.Component {
         <Lists alldata={this.state.alldata}
         singledata={this.state.singledata}
         getList={this.getList}
-        updateList = {this.updateList}
+        updateList = {this.UpdateList}
         deleteList = {this.deleteList}
         handleChange = {this.handleChange} />
       );

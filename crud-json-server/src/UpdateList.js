@@ -7,7 +7,11 @@ function UpdateList(props){
     const handleShow = () =>setShow(true);
     return (
         <React.Fragment>
-            <Button variant= "primary" onClick={handleShow}>
+            <Button variant= "primary" 
+            onClick={(evt)=>{
+                handleShow();
+                props.getList(evt,props.elementId);
+            }}>
                 Update
             </Button>
             <Modal show={show} onHide={handleClose}>
@@ -40,7 +44,7 @@ function UpdateList(props){
                     variant="primary" 
                     onClick = {(event)=>{
                         handleClose();
-                        props.UpdateList(event,props.elementId);
+                        props.updateList(event,props.elementId);
                     }}>
                         Update
                     </Button>
