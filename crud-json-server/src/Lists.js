@@ -3,35 +3,35 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import UpdateList from "./UpdateList";
 import DeleteList from './DeleteList';
 
-function Lists(props){
+function Lists(props) {
     let listrows = [];
     props.alldata.forEach(element => {
         listrows.push(
-            <tr key={element.id}>
-                <td>{element.id}</td>
+            <tr key={element._id}>
+                <td>{element._id}</td>
                 <td>{element.title}</td>
                 <td>{element.author}</td>
                 <td>
                     <UpdateList
-                    elementId = {element.id}
-                    singledata = {props.singledata}
-                    getList = {props.getList}
-                    updateList = {props.updateList}
-                    handleChange = {props.handleChange}
+                        elementId={element._id}
+                        singledata={props.singledata}
+                        getList={props.getList}
+                        updateList={props.updateList}
+                        handleChange={props.handleChange}
                     ></UpdateList>
                 </td>
                 <td>
                     <DeleteList
-                    elementId = {element.id}
-                    singledata = {props.singledata}
-                    getLists = {props.getList}
-                    deleteList = {props.deleteList}
+                        elementId={element._id}
+                        singledata={props.singledata}
+                        getLists={props.getList}
+                        deleteList={props.deleteList}
                     ></DeleteList>
                 </td>
             </tr>
-        ) 
+        )
     });
-    return(
+    return (
         <table className='table table-striped'>
             <thead>
                 <tr>
@@ -46,4 +46,5 @@ function Lists(props){
         </table>
     )
 }
+
 export default Lists;
